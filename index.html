@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concesionario</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #7b2ff7, #f107a3);
+    color: #ffff00;
+  }
+
+  header {
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+  }
+
+  nav a {
+    color: yellow;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid yellow;
+  }
+
+  nav a:hover {
+    background: rgba(255,255,0,0.2);
+  }
+
+  section {
+    display: none;
+    padding: 20px;
+  }
+
+  section.active {
+    display: block;
+  }
+
+  h2 {
+    text-align: center;
+    text-shadow: 2px 2px #ff00ff;
+  }
+
+  h3 {
+    margin-top: 20px;
+    text-decoration: underline;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  th, td {
+    border: 2px solid yellow;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background: rgba(255,255,0,0.2);
+  }
+
+  tr:nth-child(even) {
+    background: rgba(255,255,0,0.1);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Concesionario</h1>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav id="menu">
+    <a href="#" onclick="showSection('gama-baja')">Gama Baja</a>
+    <a href="#" onclick="showSection('gama-media')">Gama Media</a>
+    <a href="#" onclick="showSection('gama-vip')">Gama VIP</a>
+    <a href="#" onclick="showSection('gama-deportiva')">Gama Deportiva</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- GAMA BAJA -->
+<section id="gama-baja" class="active">
+  <h2>Gama Baja</h2>
+
+  <h3>Chevrolet</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Impala</td><td>1994</td><td>$ 1.500.000</td></tr>
+    <tr><td>Tahoe</td><td>2002</td><td>$ 2.000.000</td></tr>
+    <tr><td>Tahoe</td><td>2008</td><td>$ 2.500.000</td></tr>
+    <tr><td>Tahoe</td><td>2018</td><td>$ 3.700.000</td></tr>
+    <tr><td>Avalanche</td><td>2008</td><td>$ 3.000.000</td></tr>
+    <tr><td>Express</td><td>2006</td><td>$ 4.000.000</td></tr>
+    <tr><td>K10</td><td>1984</td><td>$ 2.900.000</td></tr>
+    <tr><td>C-10</td><td>1981</td><td>$ 5.000.000</td></tr>
+  </table>
+
+  <h3>Hummer</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Hummer</td><td>2005</td><td>$ 5.000.000</td></tr>
+  </table>
+
+  <h3>Ford</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Capricre</td><td>2006</td><td>$ 2.600.000</td></tr>
+    <tr><td>Expedition</td><td>2003</td><td>$ 4.500.000</td></tr>
+  </table>
+
+  <h3>Toyota</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Preius</td><td>2009</td><td>$ 3.600.000</td></tr>
+    <tr><td>Tocoma</td><td>1995</td><td>$ 2.500.000</td></tr>
+    <tr><td>4Runner TRD</td><td>2020</td><td>$ 5.600.000</td></tr>
+  </table>
+
+  <h3>Jeep</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Wrangler</td><td>2018</td><td>$ 4.900.000</td></tr>
+    <tr><td>Grand Cheerokee</td><td>2011</td><td>$ 5.300.000</td></tr>
+  </table>
+
+  <h3>Honda</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Civic</td><td>2014</td><td>$ 4.000.000</td></tr>
+  </table>
+</section>
+
+<!-- GAMA MEDIA -->
+<section id="gama-media">
+  <h2>Gama Media</h2>
+
+  <h3>Chevrolet</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Corvette C1</td><td>1954</td><td>$ 6.900.000</td></tr>
+    <tr><td>Camaro</td><td>2011</td><td>$ 7.000.000</td></tr>
+    <tr><td>Camaro SS</td><td>2016</td><td>$ 7.900.000</td></tr>
+    <tr><td>Silverado</td><td>2019</td><td>$ 9.000.000</td></tr>
+    <tr><td>Camaro ZL1</td><td>2016</td><td>$ 8.500.000</td></tr>
+  </table>
+
+  <h3>Toyota</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Tundra</td><td>2022</td><td>$ 6.000.000</td></tr>
+    <tr><td>4Runner TRD</td><td>2020</td><td>$ 5.600.000</td></tr>
+  </table>
+
+  <h3>Dodge</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Charger</td><td>2011</td><td>$ 7.500.000</td></tr>
+    <tr><td>Charger</td><td>2015</td><td>$ 8.000.000</td></tr>
+    <tr><td>RAM 1500</td><td>2009</td><td>$ 9.500.000</td></tr>
+  </table>
+
+  <h3>Ford</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Bronco</td><td>2021</td><td>$ 9.100.000</td></tr>
+    <tr><td>F150</td><td>2018</td><td>$ 9.500.000</td></tr>
+    <tr><td>Explorer</td><td>2016</td><td>$ 7.000.000</td></tr>
+    <tr><td>Fusion</td><td>2015</td><td>$ 5.600.000</td></tr>
+    <tr><td>Mustang Shelby 500GT</td><td>1969</td><td>$ 10.000.000</td></tr>
+    <tr><td>Hot Rod</td><td>1932</td><td>$ 30.000.000</td></tr>
+    <tr><td>Altima</td><td>2020</td><td>$ 6.400.000</td></tr>
+  </table>
+
+  <h3>Audi</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>RS3 Sedan</td><td>2020</td><td>$ 10.500.000</td></tr>
+    <tr><td>S5 Cabriolet</td><td>2010</td><td>$ 7.000.000</td></tr>
+  </table>
+
+</section>
+
+<!-- GAMA VIP -->
+<section id="gama-vip">
+  <h2>Gama VIP</h2>
+
+  <h3>Ford</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>F150</td><td>2022</td><td>$ 17.000.000</td></tr>
+    <tr><td>Mustang Shelby GT350</td><td>2015</td><td>$ 17.500.000</td></tr>
+    <tr><td>Raptor</td><td>2017</td><td>$ 18.000.000</td></tr>
+    <tr><td>Mustang Mach-E</td><td>2024</td><td>$ 58.000.000</td></tr>
+    <tr><td>F-150 Lightning</td><td>2024</td><td>$ 52.000.000</td></tr>
+  </table>
+
+  <h3>Jeep</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Grand Cherokee WK2</td><td>2020</td><td>$ 20.000.000</td></tr>
+  </table>
+
+  <h3>Dodge</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Challenger Hellcat Widebody</td><td>2020</td><td>$ 21.000.000</td></tr>
+    <tr><td>Challenger SRT Hellcat</td><td>2022</td><td>$ 24.000.000</td></tr>
+    <tr><td>Challenger SRT Hellcat Redeye Widebody</td><td>2022</td><td>$ 25.000.000</td></tr>
+    <tr><td>Durango</td><td>2019</td><td>$ 16.000.000</td></tr>
+  </table>
+
+  <h3>Cadillac</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Escalade</td><td>2020</td><td>$ 32.000.000</td></tr>
+    <tr><td>CT5-V Blackwing</td><td>2023</td><td>$ 43.000.000</td></tr>
+  </table>
+
+  <h3>Porsche</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Cayenne Turbo</td><td>2022</td><td>$ 27.000.000</td></tr>
+  </table>
+
+  <h3>BMW</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>X5</td><td>2020</td><td>$ 20.000.000</td></tr>
+    <tr><td>I8 Roadster</td><td>2020</td><td>$ 71.000.000</td></tr>
+  </table>
+
+  <h3>Mercedes</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>AMG GT-Glass</td><td>2021</td><td>$ 35.000.000</td></tr>
+    <tr><td>G-Wagon G63</td><td>2022</td><td>$ 32.000.000</td></tr>
+  </table>
+
+  <h3>Audi</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Q8</td><td>2020</td><td>$ 23.000.000</td></tr>
+    <tr><td>SQ8 e-tron Premium Plus</td><td>2024</td><td>$ 59.000.000</td></tr>
+  </table>
+
+  <h3>Nissan</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>GTR R35</td><td>2013</td><td>$ 30.000.000</td></tr>
+  </table>
+
+  <h3>Toyota</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Supra MK5</td><td>2019</td><td>$ 21.000.000</td></tr>
+  </table>
+
+  <h3>Chevrolet</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Tahoe</td><td>2021</td><td>$ 43.000.000</td></tr>
+  </table>
+</section>
+
+<!-- GAMA DEPORTIVA -->
+<section id="gama-deportiva">
+  <h2>Gama Deportiva</h2>
+
+  <h3>Chevrolet</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Corvette C7 ZR1</td><td>2014</td><td>$ 70.000.000</td></tr>
+    <tr><td>Corvette C8 Z06</td><td>2023</td><td>$ 95.000.000</td></tr>
+  </table>
+
+  <h3>Tesla</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Cybertruck</td><td>2024</td><td>$ 200.000.000</td></tr>
+  </table>
+
+  <h3>Acura</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>NSX</td><td>2021</td><td>$ 84.000.000</td></tr>
+  </table>
+
+  <h3>Ford</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>GT</td><td>2021</td><td>$ 80.000.000</td></tr>
+  </table>
+  <h3>Audi</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>R8</td><td>2017</td><td>$ 85.000.000</td></tr>
+  </table>
+
+  <h3>McLaren</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>675LT</td><td>2016</td><td>$ 104.000.000</td></tr>
+  </table>
+
+  <h3>Bugatti</h3>
+  <table>
+    <tr><th>Modelo</th><th>Año</th><th>Precio</th></tr>
+    <tr><td>Chiron Pur Sport</td><td>2020</td><td>$ —</td></tr>
+  </table>
+</section>
+
+</main>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  function showSection(id) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    document.getElementById('menu').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
